@@ -1,5 +1,6 @@
 "use client";
 import { useEffect, useState } from "react";
+import { ChaosLayer } from "./ChaosLayer";
 
 export default function Home() {
   const [blessings, setBlessings] = useState(0);
@@ -38,11 +39,13 @@ export default function Home() {
     setBlessings((current) => {
       const next = current + 1;
       localStorage.setItem("ugandalen-blessings", String(next));
+      window.dispatchEvent(new Event("ugandalen-blessed"));
       return next;
     });
   };
   return (
     <main>
+      <ChaosLayer blessings={blessings} />
       <div className="top-stripes" aria-hidden="true" />
       <div className="marquee" aria-label="Breaking news">
         <div className="marquee-track">

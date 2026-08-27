@@ -35,6 +35,7 @@
 }
 
 body {
+  background-size: 260px auto;
   animation: background-crawl 18s linear infinite;
 }
 
@@ -93,7 +94,7 @@ h1 {
 }
 
 @keyframes background-crawl {
-  to { background-position: 430px 574px; }
+  to { background-position: 260px 174px; }
 }
 
 @keyframes title-glitch {
@@ -172,3 +173,20 @@ h1 {
     animation: none !important;
   }
 }
+
+.chaos-loader{position:fixed;inset:0;z-index:99999;display:grid;place-content:center;text-align:center;gap:18px;background:#000;color:var(--yellow);font:clamp(1.2rem,4vw,2.5rem) Impact,sans-serif;letter-spacing:3px}.chaos-loader span{width:min(600px,80vw);height:35px;border:6px ridge #fff;background:#111;padding:3px}.chaos-loader i{display:block;height:100%;background:repeating-linear-gradient(90deg,var(--red) 0 20px,var(--yellow) 20px 40px);animation:download-chaos 2s steps(10) forwards}.chaos-loader small{font:700 .8rem monospace;color:#fff}@keyframes download-chaos{from{width:2%}to{width:100%}}
+.falling-flags{position:fixed;inset:0;z-index:40;pointer-events:none;overflow:hidden}.falling-flags span{--i:0;position:absolute;left:calc(var(--i)*6.4%);top:-60px;width:42px;animation:flag-rain calc(5s + var(--i)*.22s) linear infinite;animation-delay:calc(var(--i)*-.7s)}.falling-flags img{display:block;width:100%;height:auto;border:2px solid #fff;box-shadow:0 0 8px var(--yellow)}@keyframes flag-rain{to{transform:translateY(115vh) rotate(720deg)}}
+.cursor-trail{position:fixed;inset:0;z-index:9998;pointer-events:none}.cursor-trail img{position:absolute;width:52px;height:52px;border-radius:50%;transform:translate(-50%,-50%);border:3px solid var(--yellow);box-shadow:0 0 12px var(--red);animation:trail-vanish 1.4s forwards}@keyframes trail-vanish{to{opacity:0;transform:translate(-50%,-50%) scale(2) rotate(90deg)}}
+.bouncer{position:fixed;z-index:45;left:4vw;top:15vh;width:130px;height:130px;pointer-events:none;animation:bounce-x 7s linear infinite alternate}.bouncer img{width:100%;height:100%;border-radius:50%;border:6px solid var(--red);background:var(--yellow);box-shadow:0 0 20px var(--yellow);animation:bounce-y 4.3s linear infinite alternate,spin-head 1.8s linear infinite}@keyframes bounce-x{to{transform:translateX(calc(92vw - 130px))}}@keyframes bounce-y{to{transform:translateY(70vh)}}@keyframes spin-head{to{rotate:360deg}}
+.system-alert{position:fixed;z-index:60;top:12px;left:50%;transform:translateX(-50%);width:min(620px,90vw);padding:8px;text-align:center;background:var(--red);color:#fff;border:5px outset var(--yellow);font-weight:900;animation:alert-pop 5.2s steps(1) infinite}@keyframes alert-pop{0%,8%,82%,100%{opacity:0}10%,80%{opacity:1}}
+.lore-transmission{position:fixed;z-index:55;left:10px;bottom:90px;width:min(310px,70vw);padding:10px;background:#001400;color:var(--lime);border:3px solid var(--lime);font:12px monospace;box-shadow:0 0 18px var(--lime);animation:transmission-fuzz .15s steps(2) infinite}@keyframes transmission-fuzz{50%{transform:translateX(1px);filter:brightness(1.4)}}
+.watcher-counter{position:fixed;z-index:55;right:10px;bottom:95px;text-align:center;padding:9px;background:#000;color:#fff;border:4px ridge var(--red);font:11px monospace}.watcher-counter b{color:var(--red)}
+.power-meter{position:fixed;z-index:55;right:10px;top:80px;width:180px;padding:8px;background:#000;border:4px ridge var(--yellow);font:11px monospace;text-align:center}.power-meter span{display:block;height:18px;margin:5px 0;border:2px inset #777;background:#111}.power-meter i{display:block;width:100%;height:100%;background:repeating-linear-gradient(90deg,var(--red) 0 12px,var(--yellow) 12px 24px);animation:power-flow .3s linear infinite}.power-meter strong{color:var(--yellow);font-size:16px}@keyframes power-flow{to{background-position:24px 0}}
+.chaos-controls{position:fixed;z-index:70;left:50%;bottom:8px;transform:translateX(-50%);display:flex;gap:5px;width:max-content;max-width:96vw}.chaos-controls button{padding:7px;background:#c0c0c0;color:#000;border:4px outset #fff;font:700 10px "Comic Sans MS",sans-serif}.chaos-controls .do-not-click{background:var(--red);color:#fff}.chaos-controls button:active{border-style:inset}
+.milestone-lightning{position:fixed;inset:0;z-index:90;pointer-events:none;background:#fff;animation:lightning-strike .8s steps(1) forwards}@keyframes lightning-strike{0%,22%,45%{opacity:.9}12%,35%,100%{opacity:0}}
+.corruption-message{position:fixed;z-index:85;inset:35% 10%;display:grid;place-content:center;text-align:center;background:#000;color:var(--red);border:10px double var(--red);font:clamp(2rem,7vw,5rem) Impact,sans-serif;animation:corrupt-warning .16s steps(2) infinite}@keyframes corrupt-warning{50%{transform:translate(5px,-4px);filter:invert(1)}}
+body[data-corruption="1"] main{filter:contrast(1.2)}body[data-corruption="2"] main{filter:contrast(1.4) saturate(1.8)}body[data-corruption="3"] main{filter:contrast(1.7) saturate(2);transform:skew(.4deg)}body[data-corruption="4"] main{filter:contrast(2) saturate(3);animation:site-corrupt .25s steps(2) infinite}body[data-corruption="5"] main{filter:invert(1) contrast(2);animation:site-corrupt .12s steps(2) infinite}@keyframes site-corrupt{50%{transform:translateX(7px) skew(-1deg)}}
+.blessing-quake{animation:blessing-quake .55s linear!important}@keyframes blessing-quake{0%,100%{transform:none}20%{transform:translate(8px,-5px)}40%{transform:translate(-9px,6px)}60%{transform:translate(6px,5px)}80%{transform:translate(-5px,-4px)}}
+.ugandalen-overdrive{animation:overdrive-bg .22s steps(2) infinite}.ugandalen-overdrive .panel{animation:overdrive-panels .25s steps(2) infinite}.ugandalen-overdrive h1{animation:title-glitch .35s steps(1) infinite}.ugandalen-overdrive .falling-flags span{animation-duration:1.2s}@keyframes overdrive-bg{50%{background-color:var(--red)}}@keyframes overdrive-panels{50%{box-shadow:0 0 35px var(--yellow);transform:rotate(.3deg)}}
+@media(max-width:700px){.power-meter,.watcher-counter{display:none}.lore-transmission{bottom:58px}.chaos-controls button{font-size:8px;padding:5px}.bouncer{width:90px;height:90px}.cursor-trail img{width:42px;height:42px}}
+@media(prefers-reduced-motion:reduce){.falling-flags,.cursor-trail,.bouncer,.system-alert,.milestone-lightning{display:none}.lore-transmission,.power-meter i,.chaos-loader i,.corruption-message,.ugandalen-overdrive,.ugandalen-overdrive .panel{animation:none!important}}
