@@ -111,9 +111,9 @@ export function ChaosLayer({ blessings }: { blessings: number }) {
   return (
     <>
       {loading && <div className="chaos-loader"><b>DOWNLOADING MORE UGANDALEN...</b><span><i /></span><small>PLEASE DO NOT TURN OFF YOUR MODEM</small></div>}
-      <div className="falling-flags" aria-hidden="true">{Array.from({ length: 16 }, (_, i) => <span key={i} style={{ "--i": i } as React.CSSProperties}><img src="/Flag-Uganda.webp" alt="" /></span>)}</div>
-      <div className="cursor-trail" aria-hidden="true">{trail.map((dot) => <img key={dot.id} src="/ugandalen_portrait.png" alt="" style={{ left: dot.x, top: dot.y }} />)}</div>
-      <div className="bouncer" aria-hidden="true"><img src="/ugandalen_portrait.png" alt="" /></div>
+      <div className="falling-flags" aria-hidden="true">{Array.from({ length: 16 }, (_, i) => <span key={i} style={{ "--i": i } as React.CSSProperties}><img src="/img/Flag-Uganda.webp" alt="" /></span>)}</div>
+      <div className="cursor-trail" aria-hidden="true">{trail.map((dot) => <img key={dot.id} src="/img/ugandalen_portrait.png" alt="" style={{ left: dot.x, top: dot.y }} />)}</div>
+      <div className="bouncer" aria-hidden="true"><img src="/img/ugandalen_portrait.png" alt="" /></div>
       <aside className="system-alert">{alert}</aside>
       <aside className="lore-transmission">📡 INCOMING TRANSMISSION:<br /><b>{transmission}</b></aside>
       <aside className="watcher-counter">🔴 LIVE<br /><b>UGANDALEN IS WATCHING</b><br />{watchers} USERS</aside>

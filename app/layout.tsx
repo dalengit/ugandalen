@@ -5,7 +5,7 @@ import "./nav.css";
 export const metadata: Metadata = {
   title: "Ugandalen's Extremely Official Homepage",
   description: "Sightings, rumours and forbidden lore concerning VR's most mysterious patterned icon.",
-  icons: { icon: "/ugandalen_portrait.png" },
+  icons: { icon: "/img/ugandalen_portrait.png" },
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {

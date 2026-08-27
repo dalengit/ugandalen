@@ -60,7 +60,7 @@ export default function Home() {
           <div className="construction">
             🚧 WEBSITE UNDER ETERNAL CONSTRUCTION 🚧
           </div>
-          <img className="flag" src="/Flag-Uganda.webp" alt="Flag of Uganda" />
+          <img className="flag" src="/img/Flag-Uganda.webp" alt="Flag of Uganda" />
           <p className="eyebrow">OFFICIAL CYBER-HOME OF</p>
           <h1>UGANDALEN</h1>
           <p className="subtitle">
@@ -74,7 +74,7 @@ export default function Home() {
             </div>
             <div className="portrait-frame">
               <img
-                src="/ugandalen_portrait.png"
+                src="/img/ugandalen_portrait.png"
                 alt="The legendary Ugandalen"
               />
               <span>👑 SAY HIS NAME 👑</span>
@@ -96,6 +96,15 @@ export default function Home() {
             </button>
             <button className="nav-button" onClick={() => jumpTo("facts")}>
               FORBIDDEN LORE
+            </button>
+            <button className="nav-button" onClick={() => jumpTo("sightings")}>
+              RECENT SIGHTINGS
+            </button>
+            <button className="nav-button" onClick={() => jumpTo("field-guide")}>
+              FIELD GUIDE
+            </button>
+            <button className="nav-button" onClick={() => jumpTo("faq")}>
+              AVOIDED QUESTIONS
             </button>
             <button className="nav-button" onClick={() => jumpTo("guestbook")}>
               GUESTBOOK
@@ -164,6 +173,59 @@ export default function Home() {
             </section>
           </div>
         </div>
+        <section className="panel archive-section" id="sightings">
+          <h2>📡 RECENT UGANDALEN SIGHTINGS 📡</h2>
+          <p className="archive-intro">Reports are submitted by the public and verified by absolutely nobody.</p>
+          <div className="sighting-grid">
+            <article><time>23:17:04</time><b>PUBLIC LOBBY 09</b><p>Appeared behind the mirror. Refused to elaborate. Outfit luminance described as “legally concerning.”</p><span>STATUS: PATTERN CONFIRMED</span></article>
+            <article><time>01:42:69</time><b>UNKNOWN INSTANCE</b><p>Three users heard the phrase “say his name.” Nobody admitted to speaking.</p><span>STATUS: AUDIO CORRUPTED</span></article>
+            <article><time>19:97:00</time><b>LOBBY 404</b><p>Ugandalen stood motionless for eleven minutes. Entire lobby changed outfits voluntarily.</p><span>STATUS: MASS INFLUENCE EVENT</span></article>
+          </div>
+        </section>
+
+        <section className="panel archive-section" id="witnesses">
+          <h2>👁 WITNESS TESTIMONIES 👁</h2>
+          <div className="testimony-wall">
+            <blockquote>“I asked where the outfit came from. My connection immediately dropped.”<cite>— xXShadowBoy2009Xx</cite></blockquote>
+            <blockquote>“There was no music playing, but somehow the pattern had a bassline.”<cite>— witness #0042</cite></blockquote>
+            <blockquote>“I copied the look once. It changed back by itself.”<cite>— account since deleted</cite></blockquote>
+            <blockquote>“He did not enter the lobby. The lobby formed around him.”<cite>— definitely a real moderator</cite></blockquote>
+          </div>
+        </section>
+
+        <section className="panel archive-section outfit-lab" id="outfit-analysis">
+          <h2>🧪 CLASSIFIED OUTFIT ANALYSIS 🧪</h2>
+          <div className="analysis-layout">
+            <div className="specimen"><img src="/img/ugandalen_pattern.png" alt="The classified Ugandalen pattern" /><span>FIG. 1: DO NOT STARE DIRECTLY AT PATTERN</span></div>
+            <dl><div><dt>PATTERN ORIGIN</dt><dd>REDACTED BY THE VIBES DEPARTMENT</dd></div><div><dt>DRIP COEFFICIENT</dt><dd>9,999 dB</dd></div><div><dt>IMITATION RESISTANCE</dt><dd>ABSOLUTE</dd></div><div><dt>KNOWN EFFECTS</dt><dd>DEVOTION, CONFUSION, SCREENSHOTS</dd></div><div><dt>SENTIENCE</dt><dd>PROBABLY. DO NOT ANTAGONISE.</dd></div></dl>
+          </div>
+          <h3 className="wardrobe-heading">⚠ RECOVERED OUTFIT COMPONENTS ⚠</h3>
+          <div className="wardrobe-grid">
+            <figure><img src="/img/ugandalen_hat.png" alt="Ugandalen patterned hat" /><figcaption><b>THE CROWN UNIT</b><span>Thought containment: FAILED</span></figcaption></figure>
+            <figure><img src="/img/ugandalen_jumper.png" alt="Ugandalen patterned jumper" /><figcaption><b>THE PRESENCE AMPLIFIER</b><span>Core drip output: MAXIMUM</span></figcaption></figure>
+            <figure><img src="/img/ugandalen_pants.png" alt="Ugandalen patterned trousers" /><figcaption><b>THE STRIDE VESSEL</b><span>Movement class: UNFOLLOWABLE</span></figcaption></figure>
+            <figure><img src="/img/ugandalen_shoes.png" alt="Ugandalen patterned shoes" /><figcaption><b>THE SPAWN STEPPERS</b><span>Footprint evidence: NONE</span></figcaption></figure>
+          </div>
+          <p className="wardrobe-warning">NOTICE: The components have never been successfully separated in the field. Images may be recreations, warnings, or memories implanted by the pattern.</p>
+        </section>
+
+        <section className="panel archive-section" id="field-guide">
+          <h2>🚨 UGANDALEN FIELD GUIDE 🚨</h2>
+          <p className="archive-intro">If Ugandalen manifests in your lobby, remain calm and follow the approved procedure.</p>
+          <ol className="protocol"><li><b>DO NOT PANIC.</b><span>Panic feeds the pattern.</span></li><li><b>MAINTAIN A RESPECTFUL DISTANCE.</b><span>Three metres or one loading screen.</span></li><li><b>COMPLIMENT THE OUTFIT.</b><span>This is mandatory and also objectively correct.</span></li><li><b>DO NOT ASK WHO IS INSIDE.</b><span>The answer will only create more questions.</span></li><li><b>TAKE A SCREENSHOT.</b><span>It will be blurry. Submit it anyway.</span></li><li><b>SAY HIS NAME.</b><span>You already know it.</span></li></ol>
+        </section>
+
+        <section className="panel archive-section" id="faq">
+          <h2>❓ FREQUENTLY AVOIDED QUESTIONS ❓</h2>
+          <div className="faq-list">
+            <details><summary>Who is Ugandalen?</summary><p>Next question.</p></details>
+            <details><summary>Can I obtain the outfit?</summary><p>The outfit obtains you.</p></details>
+            <details><summary>Is Ugandalen one person?</summary><p>Current evidence says yes, no and stop asking.</p></details>
+            <details><summary>Why Uganda?</summary><p>Some truths do not require a PowerPoint.</p></details>
+            <details><summary>Is the pattern safe?</summary><p>Define “safe.”</p></details>
+            <details><summary>How do I summon him?</summary><p>You do not find Ugandalen. Ugandalen finds you.</p></details>
+          </div>
+        </section>
         <section className="panel guestbook" id="guestbook">
           <div>
             <h2>📖 THE SACRED GUESTBOOK 📖</h2>
