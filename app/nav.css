@@ -1,0 +1,174 @@
+.nav-button {
+  display: block;
+  width: 100%;
+  color: #000;
+  background: var(--yellow);
+  border: 4px outset #fff;
+  margin: 10px 0;
+  padding: 9px;
+  text-align: center;
+  font-weight: 900;
+}
+
+.nav-button:hover,
+.nav-button:focus-visible {
+  background: var(--lime);
+  transform: translateX(4px);
+}
+
+.content-stack {
+  min-width: 0;
+}
+
+.sticker-one {
+  background: var(--yellow);
+  color: var(--black);
+}
+
+.sticker-two {
+  background: var(--red);
+  color: #fff;
+}
+
+.retired-quote {
+  display: none;
+}
+
+body {
+  animation: background-crawl 18s linear infinite;
+}
+
+h1 {
+  animation: title-glitch 2.6s steps(1) infinite;
+}
+
+.flag {
+  animation: flag-float 1.8s ease-in-out infinite alternate;
+}
+
+.portrait-frame {
+  animation: portrait-power 2.2s ease-in-out infinite alternate;
+}
+
+.panel {
+  animation: panel-arrival 0.55s cubic-bezier(.2, .9, .3, 1.25) both;
+}
+
+.content-stack .panel:nth-child(2) {
+  animation-delay: 0.15s;
+}
+
+.guestbook {
+  animation-delay: 0.25s;
+}
+
+.facts li {
+  animation: lore-jitter 3.3s steps(1) infinite;
+}
+
+.facts li:nth-child(2n) {
+  animation-delay: 0.7s;
+}
+
+.facts li:nth-child(3n) {
+  animation-delay: 1.4s;
+}
+
+.facts li:hover {
+  animation: fact-freakout 0.18s steps(2) infinite;
+  background: var(--red);
+  color: #fff;
+}
+
+.counter {
+  animation: counter-pulse 0.9s steps(2) infinite;
+}
+
+.award {
+  animation: award-shine 1.6s ease-in-out infinite alternate;
+}
+
+.guestbook button:hover {
+  animation: guestbook-panic 0.22s steps(2) infinite;
+}
+
+@keyframes background-crawl {
+  to { background-position: 430px 574px; }
+}
+
+@keyframes title-glitch {
+  0%, 86%, 100% {
+    color: var(--yellow);
+    -webkit-text-stroke-color: var(--red);
+    text-shadow: 5px 5px 0 #fff, 10px 10px 0 var(--red);
+    transform: skew(-4deg);
+  }
+  88% {
+    color: var(--black);
+    -webkit-text-stroke-color: var(--red);
+    text-shadow: -7px 0 0 var(--red), 7px 3px 0 #000;
+    transform: skew(8deg) translateX(-5px);
+  }
+  90% {
+    color: var(--red);
+    -webkit-text-stroke-color: var(--black);
+    text-shadow: 8px 0 0 #000, -5px -3px 0 var(--red);
+    transform: skew(-9deg) translateX(7px);
+  }
+  92% {
+    color: var(--black);
+    -webkit-text-stroke-color: var(--red);
+    text-shadow: 4px -2px 0 var(--red), -4px 2px 0 #000;
+    transform: skew(-4deg);
+  }
+}
+
+@keyframes flag-float {
+  to { transform: translateY(-7px) rotate(2deg); box-shadow: 0 0 28px var(--yellow); }
+}
+
+@keyframes portrait-power {
+  0% { transform: rotate(-1deg) scale(1); filter: saturate(1); }
+  100% { transform: rotate(1deg) scale(1.018); filter: saturate(1.35) contrast(1.05); }
+}
+
+@keyframes panel-arrival {
+  from { opacity: 0; transform: translateY(28px) rotate(-0.7deg); }
+  to { opacity: 1; transform: translateY(0) rotate(0); }
+}
+
+@keyframes lore-jitter {
+  0%, 92%, 100% { transform: translateX(0); }
+  94% { transform: translateX(3px); }
+  96% { transform: translateX(-2px); }
+}
+
+@keyframes fact-freakout {
+  50% { transform: translateX(5px) rotate(0.5deg); }
+}
+
+@keyframes counter-pulse {
+  50% { color: var(--yellow); text-shadow: 0 0 12px var(--red); }
+}
+
+@keyframes award-shine {
+  to { filter: brightness(1.4); box-shadow: 0 0 20px #6bbcff; }
+}
+
+@keyframes guestbook-panic {
+  50% { transform: rotate(2deg) scale(1.04); background: var(--yellow); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body,
+  h1,
+  .flag,
+  .portrait-frame,
+  .panel,
+  .facts li,
+  .counter,
+  .award,
+  .guestbook button:hover {
+    animation: none !important;
+  }
+}
