@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { ChaosLayer } from "./ChaosLayer";
 
 export default function Home() {
+  const asset = (name: string) => `${import.meta.env.BASE_URL}img/${name}`;
   const [blessings, setBlessings] = useState(0);
   const [visitorCount, setVisitorCount] = useState(42069);
   const [guestbook, setGuestbook] = useState("SIGN MY GUESTBOOK");
@@ -60,7 +61,7 @@ export default function Home() {
           <div className="construction">
             🚧 WEBSITE UNDER ETERNAL CONSTRUCTION 🚧
           </div>
-          <img className="flag" src="/img/Flag-Uganda.webp" alt="Flag of Uganda" />
+          <img className="flag" src={asset("Flag-Uganda.webp")} alt="Flag of Uganda" />
           <p className="eyebrow">OFFICIAL CYBER-HOME OF</p>
           <h1>UGANDALEN</h1>
           <p className="subtitle">
@@ -74,7 +75,7 @@ export default function Home() {
             </div>
             <div className="portrait-frame">
               <img
-                src="/img/ugandalen_portrait.png"
+                src={asset("ugandalen_portrait.png")}
                 alt="The legendary Ugandalen"
               />
               <span>👑 SAY HIS NAME 👑</span>
@@ -196,15 +197,15 @@ export default function Home() {
         <section className="panel archive-section outfit-lab" id="outfit-analysis">
           <h2>🧪 CLASSIFIED OUTFIT ANALYSIS 🧪</h2>
           <div className="analysis-layout">
-            <div className="specimen"><img src="/img/ugandalen_pattern.png" alt="The classified Ugandalen pattern" /><span>FIG. 1: DO NOT STARE DIRECTLY AT PATTERN</span></div>
+            <div className="specimen"><img src={asset("ugandalen_pattern.png")} alt="The classified Ugandalen pattern" /><span>FIG. 1: DO NOT STARE DIRECTLY AT PATTERN</span></div>
             <dl><div><dt>PATTERN ORIGIN</dt><dd>REDACTED BY THE VIBES DEPARTMENT</dd></div><div><dt>DRIP COEFFICIENT</dt><dd>9,999 dB</dd></div><div><dt>IMITATION RESISTANCE</dt><dd>ABSOLUTE</dd></div><div><dt>KNOWN EFFECTS</dt><dd>DEVOTION, CONFUSION, SCREENSHOTS</dd></div><div><dt>SENTIENCE</dt><dd>PROBABLY. DO NOT ANTAGONISE.</dd></div></dl>
           </div>
           <h3 className="wardrobe-heading">⚠ RECOVERED OUTFIT COMPONENTS ⚠</h3>
           <div className="wardrobe-grid">
-            <figure><img src="/img/ugandalen_hat.png" alt="Ugandalen patterned hat" /><figcaption><b>THE CROWN UNIT</b><span>Thought containment: FAILED</span></figcaption></figure>
-            <figure><img src="/img/ugandalen_jumper.png" alt="Ugandalen patterned jumper" /><figcaption><b>THE PRESENCE AMPLIFIER</b><span>Core drip output: MAXIMUM</span></figcaption></figure>
-            <figure><img src="/img/ugandalen_pants.png" alt="Ugandalen patterned trousers" /><figcaption><b>THE STRIDE VESSEL</b><span>Movement class: UNFOLLOWABLE</span></figcaption></figure>
-            <figure><img src="/img/ugandalen_shoes.png" alt="Ugandalen patterned shoes" /><figcaption><b>THE SPAWN STEPPERS</b><span>Footprint evidence: NONE</span></figcaption></figure>
+            <figure><img src={asset("ugandalen_hat.png")} alt="Ugandalen patterned hat" /><figcaption><b>THE CROWN UNIT</b><span>Thought containment: FAILED</span></figcaption></figure>
+            <figure><img src={asset("ugandalen_jumper.png")} alt="Ugandalen patterned jumper" /><figcaption><b>THE PRESENCE AMPLIFIER</b><span>Core drip output: MAXIMUM</span></figcaption></figure>
+            <figure><img src={asset("ugandalen_pants.png")} alt="Ugandalen patterned trousers" /><figcaption><b>THE STRIDE VESSEL</b><span>Movement class: UNFOLLOWABLE</span></figcaption></figure>
+            <figure><img src={asset("ugandalen_shoes.png")} alt="Ugandalen patterned shoes" /><figcaption><b>THE SPAWN STEPPERS</b><span>Footprint evidence: NONE</span></figcaption></figure>
           </div>
           <p className="wardrobe-warning">NOTICE: The components have never been successfully separated in the field. Images may be recreations, warnings, or memories implanted by the pattern.</p>
         </section>
